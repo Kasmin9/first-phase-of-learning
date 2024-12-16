@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First JavaScript Page</title>
+</head>
+<body>
+  <h1>Welcome to Color Changing site!</h1>
+  
+  <!-- Message displayed when the page loads -->
+  <p id="message"></p>
+  
+  <!-- Button to change background color -->
+  <button onclick="changeColor()">Lets the party begins</button>
+
+  <script>
+    // auto color changer and time interval added
+    setInterval(()=> changeColor(), 1000);
+    // Step 1: Show a message when the page loads
+    document.getElementById("message").innerText = "Hello, world! Lets rock tonight.";
+
+    // Step 2: Function to change the background color
+    function changeColor() {
+      const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>
